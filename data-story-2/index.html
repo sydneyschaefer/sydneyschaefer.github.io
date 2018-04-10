@@ -1,0 +1,273 @@
+<head>
+	<script src="js/tabs.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
+
+
+
+	<style>
+
+		body {
+		    margin: 0;
+		}
+
+		/*HERO IMAGE*/
+		#hero {
+			background-image: url("img/nova_stevefalk.jpg");
+			width:100%;
+			height: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position:relative;
+			top:0;
+			left:0;
+		}
+
+		.caption {
+			color:grey;
+			font-family: 'Heebo', sans-serif;
+			font-size: 11px;
+		}
+
+		.hero-headline {
+			color: white;
+			font-size: 75px;
+			font-family: 'Graduate', cursive;
+			padding-top: 20px;
+			text-align:center;
+		}
+
+
+
+		/*container*/
+		#container {
+			font-family: 'Heebo', sans-serif;
+			font-size:13px;
+			max-width:80%;
+			margin:0 auto;
+		}
+
+		#defaultOpen {
+			display:inline
+		}
+
+		/* Style the tab buttons */
+		.tablink {
+		    background-color: #555;
+		    color: white;
+		    float: left;
+		    border: none;
+		    outline: none;
+		    cursor: pointer;
+		    padding: 14px 16px;
+		    font-size: 12px;
+		    width: 12.5%;
+		}
+
+
+		/* Change background color of buttons on hover */
+		.tablink:hover {
+		    background-color: #777;
+		}
+
+		/* Set default styles for tab content */
+		.tabcontent {
+		    color: white;
+		    display: none;
+		    text-align: center;
+		}
+
+		.tabcontent img {
+			width:100%;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="hero">
+		<h1 class="hero-headline">HOW NCAA BRACKET PREDICTIONS MATCH UP TO WILDCAT WIN</h1>
+	</div>
+	<div id="container">
+		<p class="caption">Villanova celebrates beating Michigan, 79-62, in the NCAA National Championship game on Monday, April 2, 2018 at the Alamodome in San Antonio, Texas. (Steven M. Falk / The Philadelphia Inquirer)</p>
+		<h2>The Championship</h2>
+		The Villanova Wildcats cut down the nets at the Alamodome in San Antonio, Texas on April 2 after they defeated the Michigan Wolverines, 79-62, in the 2018 NCAA National Championship game. The Wildcats’ secret weapon: redshirt-sophomore guard Donte DiVincenzo.<br>
+		<br>
+		DiVincenzo didn’t start in the championship game, but ended up being named Most Outstanding Player by the end of the 40 minutes. He replaced redshirt-freshman forward Omari Spellman early in the first half, and didn’t sit on the bench again. He played a total of 37 minutes and accounted for 31 of Villanova’s 79 points, hitting back-to-back 3-point shots. This marked the most points ever scored by a bench player in NCAA National Championship game history, as reported by SB Nation.<br>
+		<br>
+		This is Villanova’s second NCAA National Championship title in three years, and the only time any city has ever seen a Superbowl win and an NCAA tournament win in the same year. So, how many people predicted this outcome correctly?
+		</p>
+
+		<h2>The Predictions</h2>
+
+		<p>A total of 37,356 brackets filled out via the NCAA’s Capital One Bracket Challenge predicted Villanova to play Michigan in the championship game, according to the NCAA. However, only 17.5% of brackets overall picked Villanova to win it all. That’s out of millions that submitted brackets via this bracket challenge game and doesn’t include any paper brackets filled out and posted on social media or other bracket games on other sports news sites, such as ESPN and Bleacher Report.<br>
+		<br>
+		<div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+		<script>
+		
+		Highcharts.setOptions({
+			  colors: ['#002664', '#E57200', '#003366', '#ffc82d', '#4B9CD3', '#18453b', '#a90b25', '#9EA2A2', '#ffcb05', '#000000']
+			});
+
+			Highcharts.chart('container2', {
+			  chart: {
+			    plotBackgroundColor: null,
+			    plotBorderWidth: null,
+			    plotShadow: false,
+			    type: 'pie'
+			  },
+			  title: {
+			    text: 'Top 10 teams predicted to win NCAA Championship'
+			  },
+
+			  credits: {
+			    enabled: true,
+			    text: 'Sydney Schaefer'
+			  },
+
+			  tooltip: {
+			    pointFormat: '<span style="font-size: .9em;">{point.y}</span>',
+			  },
+			  plotOptions: {
+			    pie: {
+			      allowPointSelect: true,
+			      cursor: 'pointer',
+			      dataLabels: {
+			        enabled: true,
+			        format: '<b>{point.name}</b>: {point.y}%',
+			        style: {
+			          color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+			        }
+			      }
+			    }
+			  },
+			  series: [{
+			    name: 'Teams',
+			    colorByPoint: true,
+			    data: [{
+			      name: 'Villanova',
+			      y: 17.5,
+			    }, {
+			      name: 'Virginia',
+			      y: 16.46,
+			    }, {
+			      name: 'Duke',
+			      y: 10.96,
+			    }, {
+			      name: 'Kansas',
+			      y: 9.56,
+			    }, {
+			      name: 'North Carolina',
+			      y: 8.36,
+			    }, {
+			      name: 'Michigan State',
+			      y: 7.74,
+			    }, {
+			      name: 'Arizona',
+			      y: 4.92,
+			    }, {
+			      name: 'Xavier',
+			      y: 4.18,
+			    }, {
+			      name: 'Michigan',
+			      y: 3.5,
+			    }, {
+			      name: 'Purdue',
+			      y: 2.59,
+			    }]
+			  }]
+			});
+
+		</script>
+		<br>
+		About 3.5% of these brackets predicted Michigan to win it all, despite most bracketologists not even including the Wolverines in their Final Four picks.<br>
+		<br>
+		Below are seven brackets predicted by some of the most trusted bracketologists and sports writers in the field. Brad Evans of Yahoo Sports is the only one listed who predicted Michigan to get to the Final Four.
+		</p>
+
+		<button class="tablink" onclick="openBracket('Official', this, 'none')" id="defaultOpen" style="background-color:none;">Official</button>
+		<button class="tablink" onclick="openBracket('Brad Evans', this, 'none')">Brad Evans</button>
+		<button class="tablink" onclick="openBracket('Chip Patterson', this, 'none')">Chip Patterson</button>
+		<button class="tablink" onclick="openBracket('Dennis Dodd', this, 'none')">Dennis Dodd</button>
+		<button class="tablink" onclick="openBracket('Gary Parrish', this, 'none')" >Gary Parrish</button>
+		<button class="tablink" onclick="openBracket('Jeff Einesberg', this, 'none')">Jeff Einesberg</button>
+		<button class="tablink" onclick="openBracket('Jerry Palm', this, 'none')">Jerry Palm</button>
+		<button class="tablink" onclick="openBracket('Joe Lunardi', this, 'none')">Joe Lunardi</button>
+
+		<div id="Official" class="tabcontent" style="display:block;">
+		  <h3>Official</h3>
+		  <img src="img/ncaa_bracket-final_official bracket.png"></img>
+		</div>
+
+		<div id="Brad Evans" class="tabcontent">
+		  <h3>Brad Evans</h3>
+		  <img src="img/ncaa_bracket-final_brad evans.png"></img>
+		</div>
+
+		<div id="Chip Patterson" class="tabcontent">
+		  <h3>Chip Patterson</h3>
+		  <img src="img/ncaa_bracket-final_chip patterson.png"></img>
+		</div>
+
+		<div id="Dennis Dodd" class="tabcontent">
+		  <h3>Dennis Dodd</h3>
+		  <img src="img/ncaa_bracket-final_dennis dodd.png"></img>
+		</div>
+
+		  <div id="Gary Parrish" class="tabcontent">
+		  <h3>Gary Parrish</h3>
+		  <img src="img/ncaa_bracket-final_gary parrish.png"></img>
+		</div>
+
+		  <div id="Jeff Einesberg" class="tabcontent">
+		  <h3>Jeff Einesberg</h3>
+		  <img src="img/ncaa_bracket-final_jeff einesberg.png"></img>
+		</div>
+
+		  <div id="Jerry Palm" class="tabcontent">
+		  <h3>Jerry Palm</h3>
+		  <img src="img/ncaa_bracket-final_jerry palm.png"></img>
+		</div>
+
+		  <div id="Joe Lunardi" class="tabcontent">
+		  <h3>Joe Lunardi</h3>
+		  <img src="img/ncaa_bracket-final_joe lunardi.png"></img>
+		</div>
+
+		<p>Two of these bracketologists  —  Brad Evans, again, and Chip Patterson of CBS Sports  —  predicted Villanova to win it all again this year. However, where did most bracketologists, and fans, go wrong in their predictions?<br>
+		<br>
+		Well, most picked as anyone would assume the tournament to play out  —  No. 1 seeds beating No. 16 seeds, and so on  —  but the mispredictions lie in the biggest upsets of the tournament.</p>
+
+		<h2>The Upsets</h2>
+		The biggest upset of the tournament  —  in fact, the biggest upset in the history of the NCAA men’s basketball tournament  —  occurred in the first round of the south region matchups. No. 1 seed University of Virginia fell to the No. 16 seed University of Maryland, Baltimore County (UMBC), 74-54.<br>
+		<br>
+		Virginia had a 98% chance of winning that game, as reported by FiveThirtyEight. This was the first sign that most brackets weren’t going to go as planned, as about 16.46% of brackets in the NCAA’s bracket challenge game had predicted Virginia to win the title this year, as represented in the pie chart above.<br>
+		<br>
+		“Before the Retrievers’ win — through 28 games of the 2018 NCAA tournament — there were 25 perfect brackets left across all major bracket games. All had the Cavaliers winning,” as stated in an article published by the NCAA after UMBC took down Virginia.<br>
+		<br>
+		The NCAA was tracking tens of millions of brackets in five major bracket games played throughout the tournament, including the NCAA’s Capital One Challenge game, ESPN, Bleacher Report, Yahoo and CBS.<br>
+		<br>
+		These 25 remaining perfect brackets were across all five games listed above, and were all shattered after the upset.<br>
+		<br>
+		The article also states that only 2.18% of all NCAA’s Capital One Challenge Game predicted UMBC to actually pull off the upset. But the Retrievers' fairytale story was shortlived, as they were defeated in the second round by No. 9 seed Kansas State.<br>
+		<br>
+		The second biggest upset of the tournament  —  and the first overall upset  —  also came out of the south region when the No. 11 seed Loyola-Chicago Ramblers defeated No. 6 seed University of Miami with a last-second 3-point shot at the buzzer. Against most odds, the Ramblers carried themselves all the way to the Final Four before their Cinderella story ended and they were defeated by Michigan, 69-57.<br>
+		<br>
+		Other upsets that occurred throughout the tournament included No. 7 seed Nevada making their way to the Sweet 16, No. 2 seed North Carolina ending their run in the second round after being defeated by No. 7 seed Texas A&M and No. 13 seed Marshall defeating No. 4 seed Wichita State in the east region first round.
+		</p>
+
+		<h2>The Outcome</h2>
+		<p>All in all, across most bracket challenge games and pools, it seems that Villanova was the most-picked team to snag the title again this year. And they did just that.<br>
+		<br>
+		The Wildcats have an outstanding line-up, including John R. Wooden Player of the Year Award and Bob Cousy Point Guard of the Year Award winner, Jalen Brunson. Another Wildcat also snagged an award this year  —  Mikal Bridges who took home the Julius Erving Small Forward of the Year Award.<br>
+		<br>
+		That NCAA trophy will attract young players from across the country as it sits in Villanova’s basketball facility, but only time will tell what the Wildcats will do next and who will take home the trophy next year.<br>
+		<br>
+		For now, Philadelphians are expecting a third championship win this year. Sixers, it’s your turn.
+		</p>
+		<p>Sources: click <a href="https://docs.google.com/document/d/e/2PACX-1vTt5-B4s7jpMr2Yxs1T2yu34pUtehYIkVj_azQAke5pLiQczvGqd951WddDPayOnQAADj0zX3mwnKNc/pub">here</a>.</p>
+	</div>
+</body>
